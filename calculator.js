@@ -1,4 +1,5 @@
 const showNum = document.querySelector('.show-num');
+let decimalCount = 0;
 
 
 
@@ -7,7 +8,7 @@ document.querySelectorAll('button').forEach((button) => {
         let checkType = Number(button.innerText)
 
         if (!isNaN(checkType)) {
-            if (showNum.offsetWidth < 440) {
+            if (showNum.offsetWidth < 440 && showNum.innerText !== '0.') {
                 if (showNum.innerText === '0') {
                     showNum.innerText = button.innerText;
                     
@@ -21,10 +22,10 @@ document.querySelectorAll('button').forEach((button) => {
         }
 
 
-        if (showNum.offsetWidth < 440  ) {
+        if (showNum.offsetWidth < 440 && button.innerText === '.' && decimalCount == 0 ) {
 
             showNum.append(button.innerText);
-            
+            decimalCount = 1;
         }
         if (button.innerText === '*' ) {
             
