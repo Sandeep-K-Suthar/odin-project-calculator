@@ -95,5 +95,24 @@ button {
     
 }
 
+button:hover{
+    background:#ffd16fdf;
+    border-style: none;
+    backdrop-filter: blur(10px);
+    filter: drop-shadow(5px 5px 5px rgb(120, 120, 120));
+
+}
+.equal:hover{
+    background: lightgreen;
+}
+.clear:hover{
+    background: #E32636;
+    color: whitesmoke;
+}
+.del:hover{
+    background: rgb(245, 65, 65);
+    color: whitesmoke;
+}
+
 
 
