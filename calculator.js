@@ -89,7 +89,25 @@ document.querySelectorAll('button').forEach((button) => {
                     break;
             }
         }
-        
+        if (button.innerText === 'Clear') {
+            showNum.innerText = 0;
+            decimalCount = 0;
+            num1 = 0;
+            num2 = 0;
+            operation = 'none';
+            result = 0;
+        }
+        if (button.innerText === 'Del') {
+            let convert = (showNum.innerText).toString().split('');
+            convert.splice(convert.length - 1, 1);
+            convert = convert.join('');
+            showNum.innerText = convert;
+            
+            if (convert.length < 1) {
+                showNum.innerText = 0;
+            }
+
+        }
     })
 
 
